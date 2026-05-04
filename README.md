@@ -66,3 +66,13 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 docker build -t tefas-api .
 docker run -p 8000:8000 tefas-api
 ```
+
+## Disclaimer
+
+This project is not affiliated with, endorsed by, or connected to TEFAS or any official institution. Fund data is fetched from publicly available sources and provided "as is" without any warranty. Do not use this data for financial decisions without independent verification.
+
+Bu proje TEFAS veya herhangi bir resmi kurumla bağlantılı değildir. Fon verileri kamuya açık kaynaklardan çekilmekte olup herhangi bir garanti verilmemektedir. Bu verileri bağımsız doğrulama yapmadan finansal kararlar için kullanmayınız.
+
+## License / Lisans
+
+[MIT](LICENSE)
