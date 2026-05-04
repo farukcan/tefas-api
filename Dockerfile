@@ -2,7 +2,7 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-RUN pip install --no-cache-dir fastapi uvicorn tefas-crawler
+RUN pip install --no-cache-dir fastapi uvicorn tefas-crawler "mcp[cli]"
 
 COPY main.py .
 

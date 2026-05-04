@@ -1,10 +1,10 @@
 # TEFAS Price API
 
-Minimal FastAPI service that returns daily prices of TEFAS funds.
+Minimal FastAPI service that returns daily TEFAS fund prices. Also serves as an MCP tool via SSE.
 
-TEFAS fonlarının günlük fiyatını döndüren minimal FastAPI servisi.
+TEFAS fonlarının günlük fiyatını döndüren minimal FastAPI servisi. SSE üzerinden MCP tool olarak da kullanılabilir.
 
-## Usage / Kullanım
+## REST API
 
 ```
 GET /price?symbol=TLE
@@ -21,12 +21,42 @@ Response / Yanıt:
 }
 ```
 
+## MCP (Model Context Protocol)
+
+The server exposes an MCP SSE endpoint at `/mcp/sse` with the `get_fund_price` tool.
+
+Sunucu `/mcp/sse` adresinde `get_fund_price` tool'unu sunar.
+
+### Claude Desktop / Claude Code Configuration
+
+Add to your MCP config (`claude_desktop_config.json` or `.claude/settings.json`):
+
+Claude Desktop veya Claude Code MCP ayarlarınıza ekleyin:
+
+```json
+{
+  "mcpServers": {
+    "tefas": {
+      "url": "http://localhost:8000/mcp/sse"
+    }
+  }
+}
+```
+
+### Available Tools / Mevcut Araçlar
+
+| Tool | Parameters | Description |
+|------|-----------|-------------|
+| `get_fund_price` | `symbol` (string) | Get today's price for a TEFAS fund / Bir TEFAS fonunun günlük fiyatını getirir |
+
+Example symbols / Örnek semboller: `TLE`, `YAC`, `IPB`
+
 ## Running / Çalıştırma
 
 ### Local / Lokal
 
 ```bash
-pip install fastapi uvicorn tefas-crawler
+pip install fastapi uvicorn tefas-crawler "mcp[cli]"
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
