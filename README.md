@@ -1,5 +1,18 @@
 # TEFAS Price API
 
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+![uvicorn](https://img.shields.io/badge/uvicorn-ASGI-499848?logo=gunicorn&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-SSE-8A2BE2?logo=anthropic&logoColor=white)
+[![PyPI - tefas-crawler](https://img.shields.io/pypi/v/tefas-crawler?label=tefas-crawler&color=orange)](https://pypi.org/project/tefas-crawler/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/farukcan/tefas-api?style=social)](https://github.com/farukcan/tefas-api/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/farukcan/tefas-api)](https://github.com/farukcan/tefas-api/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/farukcan/tefas-api)](https://github.com/farukcan/tefas-api/commits/main)
+![GitHub repo size](https://img.shields.io/github/repo-size/farukcan/tefas-api)
+![REST API](https://img.shields.io/badge/REST-API-blue)
+
 Minimal FastAPI service that returns daily TEFAS fund prices. Also serves as an MCP tool via SSE.
 
 TEFAS fonlarının günlük fiyatını döndüren minimal FastAPI servisi. SSE üzerinden MCP tool olarak da kullanılabilir.
